@@ -1,293 +1,1197 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le réveil est la puissance de la femme - Patrick Mbuyi Lambert</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
+<meta charset="UTF-8">
 
-        body {
-            background: linear-gradient(135deg, #ff007f 0%, #7b1fa2 50%, #4a148c 100%);
-            color: #1a0022;
-            line-height: 1.6;
-            padding: 20px 10px;
-            min-height: 100vh;
-        }
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 28px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-            overflow: hidden;
-            padding: 28px 20px;
-            border: 2px solid #ff4081;
-        }
+<meta name="description"
+content="Discerner avant d'aimer — Patrick Mbuyi Lambert. Un guide pour apprendre à aimer avec lucidité, maturité et discernement.">
 
-        .author-badge {
-            display: inline-block;
-            background: linear-gradient(90deg, #ff007f, #e91e63);
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            padding: 8px 18px;
-            border-radius: 20px;
-            margin: 0 auto 18px;
-            box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
-        }
+<title>Discerner avant d'aimer | Patrick Mbuyi Lambert</title>
 
-        .text-center {
-            text-align: center;
-        }
+<style>
 
-        .book-cover {
-            width: 100%;
-            max-width: 280px;
-            height: auto;
-            display: block;
-            margin: 0 auto 20px;
-            border-radius: 18px;
-            box-shadow: 0 15px 30px rgba(123, 31, 162, 0.4);
-            border: 3px solid #ff4081;
-        }
+/* =====================================================
+IDENTITÉ VISUELLE DU LIVRE
+Noir / Bleu nuit / Rouge / Crème
+===================================================== */
 
-        h1 {
-            font-size: 26px;
-            color: #6a1b9a;
-            text-align: center;
-            line-height: 1.25;
-            margin-bottom: 15px;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
+:root {
+--noir: #050608;
+--bleu-nuit: #0b111b;
+--rouge: #e52b1f;
+--rouge-fonce: #8e1512;
+--rouge-lumineux: #ff3b22;
+--creme: #f4ead3;
+--gris: #b8b8b8;
+--blanc: #ffffff;
+--bordure: rgba(229, 43, 31, 0.45);
+}
 
-        .quote-card {
-            background: linear-gradient(135deg, #fff0f6, #f3e5f5);
-            border-left: 5px solid #ff007f;
-            padding: 16px;
-            border-radius: 12px;
-            margin-bottom: 22px;
-            font-style: italic;
-            color: #4a148c;
-            font-size: 16px;
-            text-align: center;
-            font-weight: 600;
-        }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
 
-        .price-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            background: #fff0f5;
-            border-radius: 20px;
-            padding: 14px;
-            margin-bottom: 22px;
-            border: 2px dashed #ff007f;
-        }
+html {
+scroll-behavior: smooth;
+}
 
-        .price-main {
-            font-size: 28px;
-            font-weight: 900;
-            color: #d81b60;
-        }
+body {
+font-family: Arial, Helvetica, sans-serif;
+background:
+radial-gradient(circle at 70% 10%,
+rgba(229, 43, 31, 0.20),
+transparent 35%),
+var(--noir);
+color: var(--blanc);
+line-height: 1.6;
+}
 
-        .price-sub {
-            background-color: #ff007f;
-            font-size: 14px;
-            color: #ffffff;
-            font-weight: 800;
-            padding: 6px 12px;
-            border-radius: 12px;
-        }
+a {
+text-decoration: none;
+color: inherit;
+}
 
-        .btn-whatsapp {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            background: linear-gradient(135deg, #25d366 0%, #075e54 100%);
-            color: #ffffff;
-            text-align: center;
-            padding: 18px 20px;
-            font-size: 19px;
-            font-weight: 800;
-            text-decoration: none;
-            border-radius: 50px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
-            margin-bottom: 30px;
-            transition: transform 0.2s;
-        }
+/* =====================================================
+NAVIGATION
+===================================================== */
 
-        .section-title {
-            font-size: 19px;
-            font-weight: 900;
-            color: #4a148c;
-            margin-bottom: 14px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+nav {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
 
-        .intro-text {
-            font-size: 15px;
-            color: #333;
-            margin-bottom: 16px;
-        }
+display: flex;
+align-items: center;
+justify-content: space-between;
 
-        .feature-card {
-            background: #faf0f8;
-            border: 1px solid #f8bbd0;
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 14px;
-            display: flex;
-            gap: 14px;
-            align-items: flex-start;
-        }
+padding: 18px 6%;
 
-        .feature-icon {
-            font-size: 26px;
-            background: #ff80ab;
-            color: #fff;
-            padding: 10px;
-            border-radius: 14px;
-            line-height: 1;
-        }
+background: rgba(5, 6, 8, 0.92);
+backdrop-filter: blur(12px);
 
-        .feature-title {
-            font-size: 16px;
-            font-weight: 800;
-            color: #880e4f;
-            margin-bottom: 4px;
-        }
+border-bottom: 1px solid var(--bordure);
+}
 
-        .feature-desc {
-            font-size: 13px;
-            color: #444;
-            line-height: 1.4;
-        }
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
 
-        .highlight-banner {
-            border: 2px solid #ff007f;
-            background: linear-gradient(135deg, #ffe6f2, #f3e5f5);
-            border-radius: 18px;
-            padding: 20px;
-            text-align: center;
-            margin: 25px 0;
-            box-shadow: 0 6px 15px rgba(255, 0, 127, 0.15);
-        }
+font-weight: bold;
+letter-spacing: 1px;
+}
 
-        .highlight-banner-title {
-            color: #880e4f;
-            font-weight: 900;
-            font-size: 17px;
-            margin-bottom: 8px;
-        }
+.logo img {
+width: 45px;
+height: 45px;
+object-fit: cover;
+border-radius: 50%;
+border: 2px solid var(--rouge);
+}
 
-        .highlight-banner-text {
-            font-size: 14px;
-            color: #4a148c;
-            font-weight: 600;
-        }
+.logo span {
+color: var(--creme);
+}
 
-        .footer {
-            text-align: center;
-            font-size: 13px;
-            color: #880e4f;
-            margin-top: 25px;
-            font-weight: 700;
-        }
-    </style>
+.menu {
+display: flex;
+gap: 30px;
+align-items: center;
+}
+
+.menu a {
+color: var(--creme);
+font-size: 14px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.menu a:hover {
+color: var(--rouge-lumineux);
+}
+
+.nav-button {
+background: linear-gradient(
+135deg,
+var(--rouge-lumineux),
+var(--rouge-fonce)
+);
+
+padding: 12px 20px;
+border-radius: 8px;
+font-weight: bold;
+}
+
+/* =====================================================
+HERO
+===================================================== */
+
+.hero {
+min-height: 100vh;
+
+display: grid;
+grid-template-columns: 1fr 1fr;
+align-items: center;
+
+gap: 50px;
+
+padding: 140px 7% 80px;
+
+position: relative;
+overflow: hidden;
+
+background:
+radial-gradient(
+circle at 75% 40%,
+rgba(229, 43, 31, 0.25),
+transparent 35%
+),
+linear-gradient(
+135deg,
+#030405 0%,
+#0b1019 55%,
+#160606 100%
+);
+}
+
+.hero::before {
+content: "";
+position: absolute;
+inset: 0;
+
+background:
+linear-gradient(
+90deg,
+rgba(5,6,8,0.95),
+rgba(5,6,8,0.45),
+rgba(229,43,31,0.10)
+);
+
+pointer-events: none;
+}
+
+.hero-content,
+.book-area {
+position: relative;
+z-index: 2;
+}
+
+.author {
+color: var(--creme);
+font-size: 18px;
+letter-spacing: 4px;
+margin-bottom: 20px;
+}
+
+.hero h1 {
+font-size: clamp(48px, 6vw, 90px);
+line-height: 0.95;
+
+text-transform: uppercase;
+
+color: var(--creme);
+
+text-shadow:
+0 4px 20px rgba(0,0,0,0.8);
+
+margin-bottom: 25px;
+}
+
+.hero h1 span {
+color: var(--rouge-lumineux);
+}
+
+.subtitle {
+max-width: 600px;
+color: #ddd;
+font-size: 19px;
+margin-bottom: 30px;
+}
+
+.highlight {
+color: var(--rouge-lumineux);
+font-weight: bold;
+}
+
+/* =====================================================
+PRIX
+===================================================== */
+
+.price {
+display: flex;
+align-items: center;
+gap: 20px;
+
+margin: 30px 0;
+}
+
+.price-main {
+font-size: 50px;
+font-weight: 900;
+color: var(--rouge-lumineux);
+}
+
+.price-secondary {
+font-size: 21px;
+color: var(--creme);
+border-left: 1px solid #555;
+padding-left: 20px;
+}
+
+/* =====================================================
+BOUTON
+===================================================== */
+
+.cta {
+display: inline-flex;
+align-items: center;
+gap: 12px;
+
+background:
+linear-gradient(
+135deg,
+#ff3c24,
+#a71913
+);
+
+color: white;
+
+padding: 17px 28px;
+
+border-radius: 9px;
+
+font-size: 17px;
+font-weight: 900;
+
+box-shadow:
+0 10px 35px rgba(229,43,31,0.35);
+
+transition: 0.3s;
+}
+
+.cta:hover {
+transform: translateY(-4px);
+box-shadow:
+0 15px 45px rgba(229,43,31,0.55);
+}
+
+/* =====================================================
+LIVRE
+===================================================== */
+
+.book-area {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.book {
+width: min(430px, 80%);
+position: relative;
+
+transform: perspective(1000px)
+rotateY(-8deg)
+rotateX(2deg);
+
+transition: 0.5s;
+
+filter:
+drop-shadow(0 35px 35px rgba(0,0,0,0.7))
+drop-shadow(0 0 30px rgba(229,43,31,0.18));
+}
+
+.book:hover {
+transform:
+perspective(1000px)
+rotateY(0deg)
+rotateX(0deg)
+translateY(-10px);
+}
+
+.book img {
+width: 100%;
+display: block;
+
+border-radius: 4px;
+
+border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* =====================================================
+SECTIONS
+===================================================== */
+
+section {
+padding: 100px 7%;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 60px;
+}
+
+.section-title h2 {
+font-size: clamp(32px, 5vw, 55px);
+color: var(--creme);
+text-transform: uppercase;
+}
+
+.section-title span {
+color: var(--rouge-lumineux);
+}
+
+.section-title p {
+max-width: 700px;
+margin: 15px auto;
+color: var(--gris);
+}
+
+/* =====================================================
+POURQUOI LE LIVRE
+===================================================== */
+
+.why {
+background:
+linear-gradient(
+180deg,
+#09090b,
+#120606
+);
+}
+
+.why-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+max-width: 1200px;
+margin: auto;
+}
+
+.quote-box {
+border-left: 4px solid var(--rouge-lumineux);
+padding: 30px;
+
+background:
+linear-gradient(
+135deg,
+rgba(229,43,31,0.08),
+rgba(255,255,255,0.02)
+);
+}
+
+.quote-box h3 {
+font-size: 32px;
+color: var(--creme);
+margin-bottom: 20px;
+}
+
+.quote-box strong {
+color: var(--rouge-lumineux);
+}
+
+.description {
+color: #ddd;
+font-size: 17px;
+}
+
+/* =====================================================
+CARDS
+===================================================== */
+
+.cards {
+display: grid;
+grid-template-columns:
+repeat(2, minmax(0, 1fr));
+
+gap: 20px;
+}
+
+.card {
+padding: 25px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,0.06),
+rgba(229,43,31,0.05)
+);
+
+border: 1px solid var(--bordure);
+border-radius: 12px;
+
+transition: 0.3s;
+}
+
+.card:hover {
+transform: translateY(-7px);
+border-color: var(--rouge-lumineux);
+}
+
+.icon {
+width: 48px;
+height: 48px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: var(--rouge);
+margin-bottom: 15px;
+
+font-size: 22px;
+}
+
+.card h3 {
+color: var(--creme);
+margin-bottom: 8px;
+}
+
+.card p {
+color: var(--gris);
+}
+
+/* =====================================================
+AUTEUR
+===================================================== */
+
+.author-section {
+background:
+linear-gradient(
+110deg,
+#060708,
+#150505
+);
+}
+
+.author-container {
+max-width: 1100px;
+margin: auto;
+
+display: grid;
+grid-template-columns: 300px 1fr;
+gap: 50px;
+align-items: center;
+}
+
+.author-photo {
+width: 280px;
+height: 280px;
+
+object-fit: cover;
+
+border-radius: 50%;
+
+border: 3px solid var(--rouge);
+
+box-shadow:
+0 0 40px rgba(229,43,31,0.25);
+}
+
+.author-text h2 {
+font-size: 40px;
+color: var(--creme);
+margin-bottom: 20px;
+}
+
+.author-text p {
+color: #ccc;
+margin-bottom: 18px;
+}
+
+/* =====================================================
+TARIF / COMMANDE
+===================================================== */
+
+.order {
+padding: 70px 7%;
+}
+
+.order-box {
+max-width: 1100px;
+margin: auto;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+gap: 30px;
+
+padding: 45px;
+
+border: 1px solid var(--bordure);
+border-radius: 16px;
+
+background:
+radial-gradient(
+circle at 80% 50%,
+rgba(229,43,31,0.18),
+transparent 45%
+),
+#0a0b0e;
+}
+
+.order-price {
+font-size: 55px;
+font-weight: 900;
+color: var(--rouge-lumineux);
+}
+
+.order-info {
+color: var(--gris);
+}
+
+/* =====================================================
+FOOTER
+===================================================== */
+
+footer {
+padding: 60px 7% 30px;
+
+background: #030405;
+
+border-top: 1px solid var(--bordure);
+
+text-align: center;
+}
+
+footer h3 {
+color: var(--creme);
+font-size: 25px;
+}
+
+footer p {
+color: var(--gris);
+margin-top: 10px;
+}
+
+.socials {
+margin-top: 25px;
+display: flex;
+justify-content: center;
+gap: 15px;
+}
+
+.socials a {
+width: 45px;
+height: 45px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+border: 1px solid var(--rouge);
+border-radius: 50%;
+
+color: var(--creme);
+
+transition: 0.3s;
+}
+
+.socials a:hover {
+background: var(--rouge);
+transform: translateY(-4px);
+}
+
+/* =====================================================
+ANIMATION
+===================================================== */
+
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: 0.8s;
+}
+
+.reveal.active {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* =====================================================
+VERSION MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+nav {
+padding: 14px 5%;
+}
+
+.menu {
+display: none;
+}
+
+.hero {
+grid-template-columns: 1fr;
+padding-top: 130px;
+text-align: center;
+}
+
+.hero-content {
+order: 1;
+}
+
+.book-area {
+order: 2;
+}
+
+.subtitle {
+margin-left: auto;
+margin-right: auto;
+}
+
+.price {
+justify-content: center;
+}
+
+.why-grid {
+grid-template-columns: 1fr;
+}
+
+.cards {
+grid-template-columns: 1fr;
+}
+
+.author-container {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.author-photo {
+margin: auto;
+}
+
+.order-box {
+flex-direction: column;
+text-align: center;
+}
+
+.hero h1 {
+font-size: 48px;
+}
+}
+
+@media (max-width: 500px) {
+
+section {
+padding: 70px 5%;
+}
+
+.hero {
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.hero h1 {
+font-size: 42px;
+}
+
+.price-main {
+font-size: 40px;
+}
+
+.book {
+width: 90%;
+}
+
+.cta {
+width: 100%;
+justify-content: center;
+}
+
+.order {
+padding-left: 5%;
+padding-right: 5%;
+}
+
+.order-box {
+padding: 30px 20px;
+}
+}
+
+</style>
 </head>
+
 <body>
 
-    <div class="container">
-        
-        <div class="text-center">
-            <span class="author-badge">PATRICK MBUYI LAMBERT</span>
-        </div>
+<!-- =====================================================
+NAVIGATION
+===================================================== -->
 
-        <img src="couverture.jpg" alt="Le réveil est la puissance de la femme" class="book-cover">
+<nav>
 
-        <h1>LE RÉVEIL EST LA PUISSANCE DE LA FEMME</h1>
+<a href="#accueil" class="logo">
 
-        <div class="quote-card">
-            « Il ne s’agit pas de revendiquer une place. Il s’agit de se réveiller. »
-        </div>
+<img src="couverture-livre.jpeg"
+alt="Discerner avant d'aimer">
 
-        <div class="price-card">
-            <span class="price-main">15 $</span>
-            <span class="price-sub">soit 35 000 FC</span>
-        </div>
+<span>
+DISCERNER<br>
+<small>AVANT D'AIMER</small>
+</span>
 
-        <a href="https://wa.me/243983682450?text=Bonjour%20Patrick%20Mbuyi,%20je%20souhaite%20commander%20le%20livre%20'Le%20réveil%20est%20la%20puissance%20de%20la%20femme'" class="btn-whatsapp" target="_blank">
-            💬 Commander sur WhatsApp
-        </a>
+</a>
 
-        <div class="section-title">
-            ✨ Pourquoi lire ce livre ?
-        </div>
-        
-        <p class="intro-text">
-            Il y a des femmes qui ont besoin qu’on leur donne une place. Et il y en a qui ont besoin de découvrir qu’elles ont déjà en elles la capacité de prendre leur place.
-        </p>
-        <p class="intro-text">
-            <strong>Le réveil est la puissance de la femme</strong> parle de cet éveil intérieur. Une femme peut avoir du potentiel et pourtant être retenue par ses peurs, ses blessures, ses habitudes, ses dépendances, le regard des autres ou simplement une mauvaise compréhension de sa propre valeur. Tant que ces barrières ne tombent pas, elle peut rester en dessous de ce qu’elle est réellement capable de devenir.
-        </p>
-        <p class="intro-text">
-            Ce livre invite la femme à se découvrir, se reconstruire, se libérer de ce qui la limite et développer ce qu’elle porte en elle.
-        </p>
+<div class="menu">
 
-        <div class="feature-card">
-            <div class="feature-icon">👑</div>
-            <div>
-                <div class="feature-title">Se libérer des barrières intérieures</div>
-                <div class="feature-desc">Brise les peurs, blessures, dépendances et le regard des autres pour révéler ta vraie valeur.</div>
-            </div>
-        </div>
+<a href="#accueil">ACCUEIL</a>
+<a href="#livre">LE LIVRE</a>
+<a href="#auteur">À PROPOS</a>
+<a href="#forces">POUR QUI ?</a>
+<a href="#commande">COMMANDER</a>
 
-        <div class="feature-card">
-            <div class="feature-icon">📖</div>
-            <div>
-                <div class="feature-title">Des modèles bibliques forts</div>
-                <div class="feature-desc">Découvre les parcours de Déborah, Sarah, Esther et la Samaritaine.</div>
-            </div>
-        </div>
+<a href="#commande" class="nav-button">
+COMMANDER
+</a>
 
-        <div class="feature-card">
-            <div class="feature-icon">🚀</div>
-            <div>
-                <div class="feature-title">Leadership & Entrepreneuriat</div>
-                <div class="feature-desc">Aborde l'intercession, le leadership, les ennemis intérieurs et le dépassement des chaînes invisibles.</div>
-            </div>
-        </div>
+</div>
 
-        <div class="highlight-banner">
-            <div class="highlight-banner-title">« Quand une femme comprend qui elle est... »</div>
-            <div class="highlight-banner-text">Elle ne change pas seulement sa propre vie : elle devient une force pour sa famille, sa communauté et sa génération.</div>
-        </div>
+</nav>
 
-        <a href="https://wa.me/243983682450?text=Bonjour%20Patrick%20Mbuyi,%20je%20souhaite%20commander%20le%20livre%20'Le%20réveil%20est%20la%20puissance%20de%20la%20femme'" class="btn-whatsapp" target="_blank">
-            💬 Commander sur WhatsApp
-        </a>
 
-        <div class="footer">
-            Commandes & Informations : +243 98 36 82 450<br>
-            &copy; Patrick Mbuyi Lambert - Tous droits réservés
-        </div>
+<!-- =====================================================
+HERO
+===================================================== -->
 
-    </div>
+<header class="hero" id="accueil">
+
+<div class="hero-content reveal">
+
+<div class="author">
+PATRICK MBUYI LAMBERT
+</div>
+
+<h1>
+DISCERNER<br>
+AVANT <span>D'AIMER</span>
+</h1>
+
+<p class="subtitle">
+
+Le guide essentiel pour
+<span class="highlight">
+éclairer votre cœur
+</span>,
+construire une relation solide
+et éviter les pièges du sentimentalisme.
+
+</p>
+
+<div class="price">
+
+<div class="price-main">
+15 $
+</div>
+
+<div class="price-secondary">
+35 000 FC
+</div>
+
+</div>
+
+<a href="#commande" class="cta">
+🛒 COMMANDER MON EXEMPLAIRE
+</a>
+
+</div>
+
+
+<div class="book-area reveal">
+
+<div class="book">
+
+<img
+src="couverture-livre.jpeg"
+alt="Livre Discerner avant d'aimer - Patrick Mbuyi Lambert"
+>
+
+</div>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+LE LIVRE
+===================================================== -->
+
+<section class="why" id="livre">
+
+<div class="section-title reveal">
+
+<h2>
+LE LIVRE :
+<span>POURQUOI CE GUIDE ?</span>
+</h2>
+
+<p>
+Parce qu'aimer ne suffit pas toujours.
+Il faut aussi savoir discerner.
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="quote-box reveal">
+
+<h3>
+L'amour ne s'improvise pas.
+</h3>
+
+<p class="description">
+
+<strong>
+Aimer est un choix,
+mais discerner est une nécessité.
+</strong>
+
+<br><br>
+
+Trop de cœurs se brisent non pas
+par manque d'amour, mais par manque
+de discernement.
+
+</p>
+
+</div>
+
+
+<div class="description reveal">
+
+<p>
+
+<strong>Discerner avant d'aimer</strong>
+offre une clé de lecture lucide
+et profonde sur la dynamique des
+relations sentimentales.
+
+</p>
+
+<br>
+
+<p>
+
+Que vous soyez célibataire en quête
+de repères, fiancé en préparation
+au mariage ou en couple désireux
+de renforcer ses fondations, ce livre
+propose des outils psychologiques,
+spirituels et pratiques pour faire
+de meilleurs choix.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+CE QUE LE LECTEUR DÉCOUVRE
+===================================================== -->
+
+<section id="forces">
+
+<div class="section-title reveal">
+
+<h2>
+CE QUE LE LECTEUR
+<span>DÉCOUVRE</span>
+</h2>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card reveal">
+
+<div class="icon">❤</div>
+
+<h3>
+Comprendre ses sentiments
+</h3>
+
+<p>
+Différencier l'impulsion,
+l'attachement et un sentiment
+réellement construit.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">◆</div>
+
+<h3>
+Éviter l'attachement prématuré
+</h3>
+
+<p>
+Apprendre à préserver son cœur
+tout en restant ouvert à l'autre.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">♾</div>
+
+<h3>
+Communication & valeurs
+</h3>
+
+<p>
+Évaluer la compatibilité,
+les valeurs et les projets
+avant de s'engager.
+</p>
+
+</div>
+
+
+<div class="card reveal">
+
+<div class="icon">✓</div>
+
+<h3>
+Savoir dire non
+</h3>
+
+<p>
+Poser des limites claires
+sans culpabilité et avec respect.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+AUTEUR
+===================================================== -->
+
+<section class="author-section" id="auteur">
+
+<div class="author-container">
+
+<div class="reveal">
+
+<!-- Remplace cette image par une photo de l'auteur -->
+<img
+class="author-photo"
+src="auteur.jpg"
+alt="Patrick Mbuyi Lambert"
+>
+
+</div>
+
+
+<div class="author-text reveal">
+
+<h2>
+À PROPOS DE
+<span style="color:#e52b1f;">
+L'AUTEUR
+</span>
+</h2>
+
+<p>
+
+<strong>
+Patrick Mbuyi Lambert
+</strong>
+n'est pas un auteur improvisé
+ni un théoricien de salon.
+
+</p>
+
+<p>
+
+Son écriture est le fruit direct
+de son immersion dans
+l'accompagnement des jeunes,
+des fiancés et des couples confrontés
+aux réalités concrètes de la vie
+à deux.
+
+</p>
+
+<p>
+
+Son approche repose sur l'écoute,
+l'observation et les réalités vécues.
+Il aborde les relations avec un langage
+direct, dynamique et accessible,
+capable de parler à différentes
+générations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+TARIF ET COMMANDE
+===================================================== -->
+
+<section class="order" id="commande">
+
+<div class="order-box reveal">
+
+<div>
+
+<h2 style="color:#f4ead3;">
+PRÊT À COMMENCER ?
+</h2>
+
+<p class="order-info">
+
+Livre papier haute qualité<br>
+Emballage soigné<br>
+Livraison sur demande
+
+</p>
+
+<div class="order-price">
+15 $
+</div>
+
+<p class="order-info">
+soit 35 000 FC
+</p>
+
+</div>
+
+
+<div>
+
+<!--
+IMPORTANT :
+Remplace le numéro ci-dessous par ton numéro
+WhatsApp COMPLET au format international.
+
+Exemple :
+https://wa.me/243XXXXXXXXX
+-->
+
+<a
+href="https://wa.me/2433682450"
+target="_blank"
+class="cta"
+>
+
+💬 COMMANDER SUR WHATSAPP
+
+</a>
+
+<p
+style="
+margin-top:15px;
+color:#aaa;
+text-align:center;
+"
+>
+Cliquez pour passer votre commande
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+FOOTER
+===================================================== -->
+
+<footer>
+
+<h3>
+DISCERNER AVANT D'AIMER
+</h3>
+
+<p>
+Patrick Mbuyi Lambert
+</p>
+
+<p>
+© 2026 — Tous droits réservés.
+</p>
+
+</footer>
+
+
+<!-- =====================================================
+JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/*
+Animation d'apparition des éléments
+lorsque l'utilisateur descend dans la page.
+*/
+
+const elements =
+document.querySelectorAll('.reveal');
+
+const observer =
+new IntersectionObserver(
+(entries) => {
+
+entries.forEach(entry => {
+
+if (entry.isIntersecting) {
+
+entry.target
+.classList
+.add('active');
+
+}
+
+});
+
+},
+{
+threshold: 0.15
+}
+);
+
+
+elements.forEach(element => {
+
+observer.observe(element);
+
+});
+
+</script>
 
 </body>
 </html>
